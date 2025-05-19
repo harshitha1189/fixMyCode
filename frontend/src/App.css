@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1e1b33, #281d47);
+  color: #f0e6ff;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Shared panel styles */
+main .left,
+main .right {
+  height: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left panel */
+ main .left {
+  background: linear-gradient(to bottom right, #1a132e, #271b3a);
+  box-shadow: 0 0 20px #7843e6;
+  display: flex;
+  position: relative;
+  padding: 2 rem;
+  flex-direction: column;
+} 
+
+/* Code box */
+.left .code,
+.left .code pre,
+.left .code pre code {
+  flex: 1;
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #e0d7f5;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+
+
+/* Review button inside .code box */
+
+
+
+ main .left .review {
+  position: absolute;
+  bottom: 1.7rem;               /* Reduced so it doesn't push against the border */
+  right: 2.5rem;
+  background: linear-gradient(to right, #8a4fff, #6c3eff);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;             /* Use valid weight like 400/500 */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 12px #8a4fff;
+  transition: transform 0.2s ease;
+} 
+
+
+
+main .left .review:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #b18fff;
+}
+
+/* Right panel */
+main .right {
+  background: linear-gradient(to bottom, #201c3b, #2c254a);
+  padding: 2rem;
+  font-size: 1.25rem;
+  overflow-y: auto;
+  box-shadow: 0 0 20px #533f89;
+  color: #efe3ff;
+}
+
+main .right h2 {
+  color: #caaeff;
+  margin-bottom: 1rem;
+}
+
+main .right strong {
+  color: #ffe58f;
+}
+
+main .right code {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-family: 'Fira Code', monospace;
+  color: #ffd7ff;
+}
+
+
+
+ 
